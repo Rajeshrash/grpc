@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+message Number {
+    float value = 1;
+}
+
+message Welcome {
+    string hello = 1;
+}
+
+service Welcome_Message {
+    rpc WelcomeMessage(Welcome) returns (Welcome) { }
+}
+
+service Calculator {
+    rpc SquareRoot(Number) returns (Number) { }
+}
+
+service CalculatorNew {
+    rpc SquareRoot(Number) returns(Number) { }
+}
